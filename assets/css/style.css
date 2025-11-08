@@ -10,7 +10,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
+    padding: 3em;
 }
 
 #corpo-calculadora{
@@ -18,9 +18,8 @@ body{
     background-color: #000000;
     color: white;
     width: 300px;
-    height:500px;
     border-radius: 20px;
-    padding: .5em;
+    padding: 0.5em;
     flex-direction: column;
 }
 h3{
@@ -30,13 +29,11 @@ h3{
 }
 
 #operacoes-view{
-    display: block;
-    width: 290px;
-    height: 70px;
     text-align: right;
 }
 
 #operacao-anterior{
+    color: #9c9c9c;
     padding: 0.2em;
     overflow-wrap: break-word;
     min-width: 1.6em;
@@ -48,11 +45,38 @@ h3{
     font-weight: 700;
     padding: 0.2em;
     overflow-wrap: break-word;
-
 }
 
+#container-botoes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5px;
+}
 
+#container-botoes button:hover{
+    scale: 1.12;
+    background-color: #9d9c9d;
+}
 
-/* #5c5c5b
-    #303030
-    #ff9200 */
+#container-botoes button{
+    border: 1px solid transparent;
+    border-radius: 50%;
+    height: 3.5em;
+    width: 3.5em;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: #303030;
+    color: white
+}
+
+#container-botoes .operacoes{
+    background-color: #ff9200;
+}
+
+#container-botoes .operacoes:hover{
+    background-color: #ffc700;
+}
+
+#container-botoes .top-buttons{
+    background-color: #5c5c5b;
+}
